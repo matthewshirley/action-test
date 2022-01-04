@@ -10,6 +10,7 @@ jobs:
   testing-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: |
           echo ${{ github.event.workflow_run.head_sha }}
           echo ${{ toJson(github) }}
