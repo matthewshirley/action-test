@@ -1,0 +1,10 @@
+name: entry
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  starting-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ toJson(github) }} 
